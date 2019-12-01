@@ -1,0 +1,53 @@
+<center>
+<h1 id="標準化の例">標準化の例</h1>
+<p>解析ソフトでも様々な方法でデータを0-255で標準化してから可視化しているため,どの標準化手法が最も良いか考察する.</p>
+<p><br></p>
+<p><strong>結論のみ見るならば一番下までスワイプしてください.全部載ってます.</strong></p>
+<p><br></p>
+<p><a href="https://bellcurve.jp/statistics/course/19647.html">標準化とは</a></p>
+<p>なお,全ての手法について,fitsデータに含まれる値を0-255の範囲に標準化して,その値の大きさを画像の明るさで表現している.</p>
+<p>用いたデータは<a href="https://www.dropbox.com/s/8uy7pnvo2o4s44l/datas.zip?dl=0s">NGC4852.fits</a>の400or401フレーム目である.</p>
+<p><br><br><br></p>
+<h2 id="単純な標準化">1.単純な標準化</h2>
+<p>以下の式を用いて標準化する.</p>
+<p><br><br> <img src="images/png/v=valueofeachpixel.png" /><br></p>
+<p><img src="images/png/img.png" /> <br><br><br> <strong>結果</strong></p>
+<p><img src="images/normal.jpg" /></p>
+<p><br><br><br></p>
+<h2 id="自然対数を用いた標準化">2.自然対数を用いた標準化</h2>
+<p>以下の式を用いて標準化する.</p>
+<p><br><br> <img src="images/png/v=valueofeachpixel.png" /><br></p>
+<p><img src="images/png/loge.png" /><br></p>
+<p><img src="images/png/img.png" /> <br><br><br> <strong>結果</strong></p>
+<p><img src="images/loge.jpg" /></p>
+<p><br><br><br></p>
+<h2 id="正の範囲で自然対数を用いた標準化">3.正の範囲で自然対数を用いた標準化</h2>
+<p>なぜか負数も対数表現できてしまい気味が悪かったので, 以下の式を用いて標準化する.</p>
+<p><br><br> <img src="images/png/v=valueofeachpixel.png" /><br></p>
+<p><img src="images/png/v=abs.png" /><br></p>
+<p><img src="images/png/loge.png" /><br></p>
+<p><img src="images/png/img.png" /> <br><br><br> <strong>結果</strong></p>
+<p><img src="images/loge2.jpg" /></p>
+<p><br><br><br></p>
+<h2 id="を底とした自然対数を用いた標準化">4.2を底とした自然対数を用いた標準化</h2>
+<p>真数=0であると計算できないため,以下の式を用いて標準化する.</p>
+<p><br><br> <img src="images/png/v=valueofeachpixel.png" /><br></p>
+<p><img src="images/png/v=abs.png" /><br></p>
+<p><img src="images/png/v=v+1.png" /><br></p>
+<p><img src="images/png/log2.png" /><br></p>
+<p><img src="images/png/img.png" /> <br><br><br> <strong>結果</strong></p>
+<p><img src="images/log2.jpg" /></p>
+<p><br><br><br></p>
+<h2 id="を底とした自然対数を用いた標準化-1">5.10を底とした自然対数を用いた標準化</h2>
+<p>真数=0であると計算できないため,以下の式を用いて標準化する.</p>
+<p><br><br> <img src="images/png/v=valueofeachpixel.png" /><br></p>
+<p><img src="images/png/v=abs.png" /><br></p>
+<p><img src="images/png/v=v+1.png" /><br></p>
+<p><img src="images/png/log10.png" /><br></p>
+<p><img src="images/png/img.png" /> <br><br><br> <strong>結果</strong></p>
+<p><img src="images/log10.jpg" /></p>
+<p><br><br><br></p>
+<h2 id="総覧">6.総覧</h2>
+<p>単純な標準化 → log e n → log e n(1&gt;n,1&gt;n&gt;0) → log 2 n (n&gt;1) → log 10 n(n&gt;1)</p>
+<p><img src="images/normal.jpg" /> <img src="images/loge.jpg" /> <img src="images/loge2.jpg" /> <img src="images/log2.jpg" /> <img src="images/log10.jpg" /></p>
+</center>
