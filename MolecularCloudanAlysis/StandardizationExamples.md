@@ -1,4 +1,3 @@
-<center>
 # 標準化の例
 
 解析ソフトでも様々な方法でデータを0-255で標準化してから可視化しているため,どの標準化手法が最も良いか考察する.
@@ -112,5 +111,3 @@ __結果__
 単純な標準化 → log e n → log e n(1>n,1>n>0) → log 2 n (n>1) → log 10 n(n>1)
 
 ![](images/normal.jpg) ![](images/loge.jpg) ![](images/loge2.jpg) ![](images/log2.jpg) ![](images/log10.jpg)
-
-</center>
